@@ -36,6 +36,10 @@
         android:id="@+id/resultFragment"
         android:name="com.example.presentation.view.ResultFragment"
         android:label="ResultFragment"
-        tools:layout="@layout/fragment_result"/>
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/action_resultFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 
 </navigation>

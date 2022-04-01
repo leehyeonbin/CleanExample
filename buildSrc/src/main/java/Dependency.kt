@@ -1,5 +1,10 @@
 import Versions.NAV_VERSION
 
+object Versions {
+    const val NAV_VERSION = "2.4.0-alpha10"
+
+}
+
 object Kotlin {
     const val SDK = "org.jetbrains.java:java-stdlib-jdk8:1.5.21"
 }

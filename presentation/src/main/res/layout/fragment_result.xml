@@ -63,6 +63,7 @@
             android:textColor="#fff"
             android:textStyle="bold"
             android:textSize="16sp"
+            android:onClick="@{fragment::clickMainBtn}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

@@ -1,7 +1,6 @@
 package com.example.presentation.base
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -11,14 +10,13 @@ abstract class BaseActivity<T : ViewDataBinding>(
     @LayoutRes private val layoutResId : Int
 ) : AppCompatActivity() {
 
-    protected lateinit var binding : T
-
-    abstract fun init ()
+    private lateinit var binding : T
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, layoutResId)
-        binding.lifecycleOwner = this
         init()
     }
+
+    abstract fun init ()
 }
