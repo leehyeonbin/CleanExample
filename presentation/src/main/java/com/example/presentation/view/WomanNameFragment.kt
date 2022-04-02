@@ -9,7 +9,7 @@ import com.example.presentation.databinding.FragmentWomanNameBinding
 
 class WomanNameFragment : BaseFragment<FragmentWomanNameBinding>(R.layout.fragment_woman_name) {
     override fun init() {
-
+        binding.fragment = this
     }
     fun clickNestBtn (view : View) {
         this.findNavController().navigate(R.id.action_womanNameFragment_to_resultFragment)

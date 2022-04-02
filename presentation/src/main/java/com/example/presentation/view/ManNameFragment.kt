@@ -8,6 +8,7 @@ import com.example.presentation.databinding.FragmentManNameBinding
 
 class ManNameFragment : BaseFragment<FragmentManNameBinding>(R.layout.fragment_man_name) {
     override fun init() {
+        binding.fragment = this
     }
 
     fun clickNextBtn(view : View) {

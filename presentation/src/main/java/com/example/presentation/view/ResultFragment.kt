@@ -9,6 +9,7 @@ import com.example.presentation.databinding.FragmentResultBinding
 
 class ResultFragment : BaseFragment<FragmentResultBinding>(R.layout.fragment_result) {
     override fun init() {
+        binding.fragment = this
     }
 
     fun clickMainBtn (view : View){
