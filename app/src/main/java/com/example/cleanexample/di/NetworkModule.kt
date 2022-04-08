@@ -1,5 +1,7 @@
 package com.example.cleanexample.di
 
+import com.example.cleanexample.util.Utils.BASE_URL
+import com.example.data.api.LoveCalculatorApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -42,19 +44,19 @@ object NetworkModule {
         gsonConverterFactory: GsonConverterFactory
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("BASE_URL")
+            .baseUrl(BASE_URL)
             .client(okHttpClient)
             .client(provideHttpClient())
             .addConverterFactory(gsonConverterFactory)
             .build()
     }
 
-//    @Provides
-//    @Singleton
-//    //LoveCalculatorApi interface 의존성 주입
-//    fun provideLoveCalculatorApiService(retrofit: Retrofit): LoveCalculatorApi {
-//        return retrofit.create(LoveCalculatorApi::class.java)
-//    }
+    @Provides
+    @Singleton
+    //LoveCalculatorApi interface 의존성 주입
+    fun provideLoveCalculatorApiService(retrofit: Retrofit): LoveCalculatorApi {
+        return retrofit.create(LoveCalculatorApi::class.java)
+    }
 
     private fun getLoggingInterceptor(): HttpLoggingInterceptor =
         HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
