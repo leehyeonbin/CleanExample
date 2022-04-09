@@ -50,5 +50,4 @@ class ManNameFragment : BaseFragment<FragmentManNameBinding>(R.layout.fragment_m
             ErrorType.TIMEOUT -> shortToastMessage("연결 시간이 초과되었습니다.")
         }
     }
-
 }
