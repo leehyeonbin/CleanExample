@@ -33,6 +33,7 @@
                 android:src="@drawable/ic_undraw_pure_love_ay_8_a" />
 
             <TextView
+                android:id="@+id/scoreTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"

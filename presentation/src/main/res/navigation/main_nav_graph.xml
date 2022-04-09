@@ -11,8 +11,8 @@
         android:label="MainFragment"
         tools:layout="@layout/fragment_main">
         <action
-            android:id="@+id/action_mainFragment_to_manNameFragment"
-            app:destination="@id/manNameFragment" />
+            android:id="@+id/action_mainFragment_to_womanNameFragment"
+            app:destination="@id/womanNameFragment" />
     </fragment>
     <fragment
         android:id="@+id/manNameFragment"
@@ -20,8 +20,8 @@
         android:label="ManNameFragment"
         tools:layout="@layout/fragment_man_name" >
         <action
-            android:id="@+id/action_manNameFragment_to_womanNameFragment"
-            app:destination="@id/womanNameFragment" />
+            android:id="@+id/action_manNameFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
     </fragment>
     <fragment
         android:id="@+id/womanNameFragment"
@@ -29,8 +29,8 @@
         android:label="WomanNameFragment"
         tools:layout="@layout/fragment_woman_name">
         <action
-            android:id="@+id/action_womanNameFragment_to_resultFragment"
-            app:destination="@id/resultFragment" />
+            android:id="@+id/action_womanNameFragment_to_manNameFragment"
+            app:destination="@id/manNameFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
@@ -39,7 +39,10 @@
         tools:layout="@layout/fragment_result">
         <action
             android:id="@+id/action_resultFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/main_nav_graph"
+            app:popUpToInclusive="true" />
     </fragment>
 
 </navigation>
