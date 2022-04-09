@@ -1,4 +1,4 @@
-package com.example.data.model
+package com.example.data.remote.model
 
 data class DataLoveResponse(
     val fname : String,

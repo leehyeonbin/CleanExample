@@ -1,7 +1,7 @@
 package com.example.cleanexample.di
 
 import com.example.cleanexample.util.Utils.BASE_URL
-import com.example.data.api.LoveCalculatorApi
+import com.example.data.remote.api.LoveCalculatorApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
